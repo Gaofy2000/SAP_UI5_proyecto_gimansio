@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "3.1"
+metadata:
+  name: com.inetum.becapractica
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          url: http://192.168.10.13:8080/
+          client: '001'
+        app:
+          name: Z01_BECAPRACGDX
+          description: Aplicacion gimnasio
+          package: Z_FORM05
+          transport: IOTK900454
+        exclude:
+          - /test/

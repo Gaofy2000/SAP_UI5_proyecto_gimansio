@@ -1,0 +1,35 @@
+<mvc:View
+    controllerName="com.inetum.becapractica.controller.DetalleGimnasio"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:svm="sap.ui.comp.smartvariants"
+>
+    <Page title="{i18n>TituloGimnasio}">
+        <content>
+            <Table inset="false"
+            items="{ path: 'oDataModel>toCliente' }"
+ >
+                <columns>
+                    <Column width="12em">
+                        <Text text="Dni" />
+                    </Column>
+                    <Column width="12em">
+                        <Text text="Nombre" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{oDataModel>Dni}" />
+                            <Text text="{oDataModel>Nombre}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+            
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,41 @@
+<mvc:View
+    controllerName="com.inetum.becapractica.controller.List"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+>
+    <Page title="{i18n>TituloLista}">
+        <content>
+            <Table
+                id="tablaJs"
+                inset="false"
+                items="{datosModel>/TipoObjetos}"
+            >
+        <headerToolbar>
+                    <OverflowToolbar>
+                        <content>
+                            <Button icon="sap-icon://add" press="onPressAddObj" type="Accept"/>
+                            <Button icon="sap-icon://delete" press="onPressDeleteObj" type="Reject"/>
+                        </content>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column width="12em">
+                        <Text text="Tipo objeto" />
+                    </Column>
+                    <Column width="12em">
+                        <Text text="Descripcion objeto" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{datosModel>Nombre}" />
+                            <Text text="{datosModel>Desc}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>        
+</mvc:View>

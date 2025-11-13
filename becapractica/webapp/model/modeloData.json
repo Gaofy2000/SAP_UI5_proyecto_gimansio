@@ -1,0 +1,62 @@
+{
+    "TipoObjetos": [
+        {
+            "Nombre": "String",
+            "Desc": "Las cadenas son útiles para almacenar datos que se pueden representar en forma de texto. Algunas de las operaciones más utilizadas en cadenas son verificar su length, para construirlas y concatenarlas usando operadores de cadena + y +=, verificando la existencia o ubicación de subcadenas con indexOf() o extraer subcadenas con el método substring()."
+        },
+        {
+            "Nombre": "BigInt",
+            "Desc": "Un valor BigInt, a veces también llamado solamente BigInt, es un primitivo bigint, creado al anexar una n al final de un literal entero o llamando a la función BigInt() (sin el operador new) y dándole un valor ded entero o un valor de cadena."
+        }
+    ],
+    "TipoDatos": [
+        {
+            "Nombre": "Undefined",
+            "Desc": "Variables que solo han sido declaradas, ausentes de valor"
+        },
+        {
+            "Nombre": "Null",
+            "Desc": "Representa la ausencia intencional de cualquier objeto o valor primitivo"
+        },
+        {
+            "Nombre": "Boolean",
+            "Desc": "Representa un valor lógico verdadero o falso"
+        },
+        {
+            "Nombre": "Number",
+            "Desc": "Representa tanto enteros como números flotantes"
+        },
+        {
+            "Nombre": "String",
+            "Desc": "Representa una secuencia de caracteres"
+        },
+        {
+            "Nombre": "Object",
+            "Desc": "Una colección de pares-claves"
+        }
+    ],
+    "Alumnos":[
+        {
+            "Nombre": "Jose",
+            "Materia": "Programacion",
+            "Nota": 7
+        },
+        {
+            "Nombre": "Jose Antonio",
+            "Materia": "Base de datos",
+            "Nota": 4
+        },
+        {
+            "Nombre": "Ricardo",
+            "Materia": "Desarrollo Web",
+            "Nota": 9
+        }
+    ],
+    "Alumno":{
+        "Nombre": "Gao",
+        "Direccion": "Calle fernan caballero",
+        "ZP": "28019",
+        "Pais": "España"
+    },
+    "EditForm": false
+}

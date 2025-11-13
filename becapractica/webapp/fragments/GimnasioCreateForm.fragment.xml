@@ -1,0 +1,47 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+>
+    <Dialog
+        title="Gimnasio"
+        resizable="true"
+        draggable="true"
+    >
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <f:SimpleForm
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                    adjustLabelSpan="false"
+                    singleContainerFullSize="false"
+                >
+                    <f:content>
+                        <Label text="{i18n>IdGimnasio}" />
+                        <Input id="inputIdGym" value="{dialogModel>/IdGimnasio}" required="true" liveChange="onIdLiveChange"/>
+                        <Label text="{i18n>NombreGimnasio}" />
+                        <Input id="inputNombreGym" value="{dialogModel>/Nombre}" required="true"/>
+                        <!-- Con el core crea otra seccion -->
+                        <core:Title text="Seccion 2"/>
+                        <Label text="{i18n>DireccionGimnasio}" />
+                        <Input id="inputDireccionGym" value="{dialogModel>/Direccion}" required="true"/>
+                        <Label text="{i18n>CodPostalGimnasio}" />
+                        <Input type="Number" id="inputCPGym" value="{dialogModel>/CodPostal}" required="true"/>
+                    </f:content>
+                </f:SimpleForm>
+            </VBox>
+        </content>
+        <buttons>
+            <Button
+                text="Guardar"
+                type="Emphasized"
+                press="onPressSaveDialog"
+            />
+            <Button
+                text="Cancelar"
+                type="Reject"
+                press="onPressCancelDialog"
+            />
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

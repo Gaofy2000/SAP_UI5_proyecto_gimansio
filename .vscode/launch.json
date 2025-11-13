@@ -1,0 +1,236 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Start beca_practica",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/beca_practica",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandbox.html#cominetumbecapractica-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "env": {
+                "DEBUG": "--inspect",
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=001&sap-ui-xx-viewCache=false"
+            }
+        },
+        {
+            "name": "Start beca_practica Mock",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/beca_practica",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-mock.yaml",
+                "--open",
+                "test/flpSandbox.html#cominetumbecapractica-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=001&sap-ui-xx-viewCache=false"
+            }
+        },
+        {
+            "name": "Start beca_practica Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/beca_practica",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-local.yaml",
+                "--open",
+                "test/flpSandbox.html#cominetumbecapractica-display"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=001&sap-ui-xx-viewCache=false"
+            }
+        },
+        {
+            "name": "Start becapractica",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/becapractica",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flp.html#app-preview"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "env": {
+                "DEBUG": "--inspect",
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=001&sap-ui-xx-viewCache=false"
+            }
+        },
+        {
+            "name": "Start becapractica Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/becapractica",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-local.yaml",
+                "--open",
+                "test/flp.html#app-preview"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=001&sap-ui-xx-viewCache=false"
+            }
+        },
+        {
+            "name": "Start becapractica Mock",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/becapractica",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-mock.yaml",
+                "--open",
+                "test/flp.html#app-preview"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=001&sap-ui-xx-viewCache=false"
+            }
+        },
+        {
+            "name": "Start becapractica_json",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/becapractica_json",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flp.html#app-preview"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "env": {
+                "DEBUG": "--inspect",
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=001&sap-ui-xx-viewCache=false"
+            }
+        },
+        {
+            "name": "Start becapractica_json Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/becapractica_json",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-local.yaml",
+                "--open",
+                "test/flp.html#app-preview"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=001&sap-ui-xx-viewCache=false"
+            }
+        },
+        {
+            "name": "Start becapractica_json Mock",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/becapractica_json",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-mock.yaml",
+                "--open",
+                "test/flp.html#app-preview"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=001&sap-ui-xx-viewCache=false"
+            }
+        }
+    ]
+}

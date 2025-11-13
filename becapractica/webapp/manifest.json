@@ -1,0 +1,216 @@
+{
+  "_version": "1.76.0",
+  "sap.app": {
+    "id": "com.inetum.becapractica",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.19.1",
+      "toolsId": "c4d8315c-e6f4-4c8d-b5b4-ff6ca9ebb272"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZFI_GIMNASIO_ODATA_FORM05_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/mainService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      },
+      "ZFI_PRACTICA1_SRV": {
+        "uri": "/sap/opu/odata/sap/ZFI_PRACTICA1_SRV/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/ZFI_PRACTICA1_SRV/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      },
+      "northwind": {
+        "uri": "/v2/northwind/northwind.svc/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/northwind/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.141.2",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.inetum.becapractica.i18n.i18n"
+        }
+      },
+      "datosModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/modeloData.json"
+      },
+      "datosModel2": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": ""
+      },
+      "oDataModel": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      },
+      "oDataModelR": {
+        "dataSource": "ZFI_PRACTICA1_SRV",
+        "preload": true,
+        "settings": {}
+      },
+      "northwind": {
+        "dataSource": "northwind",
+        "preload": true,
+        "settings": {}
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "com.inetum.becapractica.view",
+        "async": true,
+        "viewPath": "com.inetum.becapractica.view"
+      },
+      "routes": [
+        {
+          "name": "RouteMain",
+          "pattern": ":?query:",
+          "target": [
+            "TargetMain"
+          ]
+        },
+        {
+          "name": "RouteList",
+          "pattern": "/List/{tipo}",
+          "target": [
+            "TargetList"
+          ]
+        },
+        {
+          "name": "RouteAlumn",
+          "pattern": "/Alumnos",
+          "target": [
+            "TargetAlumn"
+          ]
+        },
+        {
+          "name": "RouteFormAlumno",
+          "pattern": "/FormAlumno",
+          "target": [
+            "TargetFormAlumno"
+          ]
+        },
+        {
+          "name": "RouteGimnasio",
+          "pattern": "/Gimnasio",
+          "target": [
+            "TargetGimnasio"
+          ]
+        },
+        {
+          "name": "RouteDetalleGimnasio",
+          "pattern": "/GimnasioDetail/{idgimnasio}",
+          "target": [
+            "TargetDetalleGimnasio"
+          ]
+        },
+        {
+          "name": "RouteHospital",
+          "pattern": "/Hospital",
+          "target": [
+            "TargetHospital"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetMain": {
+          "id": "Main",
+          "name": "Main"
+        },
+        "TargetList": {
+          "id": "List",
+          "name": "List"
+        },
+        "TargetAlumn": {
+          "id": "Alumnos",
+          "name": "Alumnos"
+        },
+        "TargetFormAlumno": {
+          "id": "FormAlumno",
+          "name": "FormAlumno"
+        },
+        "TargetGimnasio": {
+          "id": "Gimnasio",
+          "name": "Gimnasio"
+        },
+        "TargetDetalleGimnasio": {
+          "id": "DetalletGimnasio",
+          "name": "DetalleGimnasio"
+        },
+        "TargetHospital": {
+          "id": "Hospital",
+          "name": "Hospital"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "com.inetum.becapractica.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  }
+}

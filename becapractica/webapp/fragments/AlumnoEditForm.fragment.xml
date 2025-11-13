@@ -1,0 +1,54 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:boton="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+>
+    <!-- La doble ! sirve para transformar en booleano -->
+    <f:SimpleForm
+        editable="true"
+        layout="ResponsiveGridLayout"
+        title="{i18n>Alumno}"
+        visible="{= !!${datosModel>/EditForm}}"
+        labelSpanXL="3"
+        labelSpanL="3"
+        labelSpanM="3"
+        labelSpanS="12"
+        adjustLabelSpan="false"
+        emptySpanXL="4"
+        emptySpanL="4"
+        emptySpanM="4"
+        emptySpanS="0"
+        columnsXL="1"
+        columnsL="1"
+        columnsM="1"
+        singleContainerFullSize="false"
+    >
+        <f:toolbar>
+            <Toolbar>
+                <Title text="{i18n>Alumno}" />
+                <ToolbarSpacer />
+                <Button
+                    icon="sap-icon://save"
+                    boton:type="save"
+                    press="onPressForm"
+                />
+                <Button
+                    icon="sap-icon://cancel"
+                    boton:type="cancel"
+                    press="onPressForm"
+                />
+            </Toolbar>
+        </f:toolbar>
+        <f:content>
+            <Label text="{i18n>NombreAlumno}" />
+            <Input value="{datosModel>/Alumno/Nombre}" />
+            <Label text="{i18n>DireccionAlumno}" />
+            <Input value="{datosModel>/Alumno/Direccion}" />
+            <Label text="{i18n>ZPAlumno}" />
+            <Input value="{datosModel>/Alumno/ZP}" />
+            <Label text="{i18n>PaisAlumno}" />
+            <Input value="{datosModel>/Alumno/Pais}" />
+        </f:content>
+    </f:SimpleForm>
+</core:FragmentDefinition>

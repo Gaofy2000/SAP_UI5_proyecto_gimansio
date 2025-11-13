@@ -1,0 +1,145 @@
+<mvc:View
+    controllerName="com.inetum.becapractica.controller.Gimnasio"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:svm="sap.ui.comp.smartvariants"
+>
+    <Page title="{i18n>TituloGimnasio}">
+        <content>
+            <fb:FilterBar
+                id="filterbar"
+                useToolbar="false"
+                search="onSearch"
+            >
+                <fb:filterGroupItems>
+                    <fb:FilterGroupItem
+                        name="id_gimnasio"
+                        label="Id"
+                        groupName="id_gimnasio"
+                        visibleInFilterBar="true"
+                    >
+                        <fb:control>
+                            <Input id="id" />
+                        </fb:control>
+                    </fb:FilterGroupItem>
+                    <fb:FilterGroupItem
+                        name="nombre"
+                        label="nombre"
+                        groupName="Nombre"
+                        visibleInFilterBar="true"
+                    >
+                        <fb:control>
+                            <Input id="name" />
+                        </fb:control>
+                    </fb:FilterGroupItem>
+                </fb:filterGroupItems>
+            </fb:FilterBar>
+            <Table
+                id="gimnasioOData"
+                inset="false"
+                items="{oDataModel>/GimnasioSet}"
+            >
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <ToolbarSpacer />
+                        <content>
+                            <Button
+                                icon="sap-icon://add"
+                                press="onPressCreateGym"
+                                type="Accept"
+                            />
+                        </content>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns >
+                    <Column width="10em">
+                        <Text text="{i18n>NombreGimnasio}" />
+                    </Column>
+                    <Column width="10em">
+                        <Text text="{i18n>DireccionGimnasio}" />
+                    </Column>
+                    <Column width="5em">
+                        <Text text="{i18n>CodPostalGimnasio}" />
+                    </Column>
+                    <Column width="5em">
+                        <Text text="{i18n>Acciones}" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem type="Navigation" press="onPressNav">
+                        <cells>
+                            <Text text="{oDataModel>Nombre}" />
+                            <Text text="{oDataModel>Direccion}" />
+                            <Text text="{oDataModel>CodPostal}" />
+                            <HBox justifyContent="Center">
+                                <Button
+                                    type="Emphasized"
+                                    icon="sap-icon://edit"
+                                    press="onPressEdit"
+                                />
+                                <Button
+                                    class="sapUiTinyMargin"
+                                    type="Reject"
+                                    icon="sap-icon://delete"
+                                    press="onPressDelete"
+                                />
+                            </HBox>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+            <!-- <Table
+                id="tablaJson"
+                inset="false"
+                items="{datosModel>/GimnasioSet}"
+            >
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <content>
+                            <Button
+                                icon="sap-icon://add"
+                                press="onPressAddObj"
+                                type="Accept"
+                            />
+                            <Button
+                                icon="sap-icon://delete"
+                                press="onPressDeleteObj"
+                                type="Reject"
+                            />
+                        </content>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column width="12em">
+                        <Text text="{i18n>NombreGimnasio}" />
+                    </Column>
+                    <Column width="12em">
+                        <Text text="{i18n>DireccionGimnasio}" />
+                    </Column>
+                    <Column width="12em">
+                        <Text text="{i18n>CodPostalGimnasio}" />
+                    </Column>
+                    <Column width="12em">
+                        <Text text="{i18n>Abierto}" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{datosModel>Nombre}" />
+                            <Text text="{datosModel>Direccion}" />
+                            <Text text="{datosModel>CodPostal}" />
+                            <ObjectStatus
+                                icon="{path: 'datosModel>Abierto', formatter: '.formatter.getIconGimnasio'}"
+                                state="{path: 'datosModel>Abierto', formatter: '.formatter.getStateGimnasio'}"
+                            />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table> -->
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,55 @@
+<mvc:View
+    controllerName="com.inetum.becapractica.controller.Alumnos"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+>
+    <Page title="{i18n>TituloAlumnos}">
+        <content>
+            <Table
+                id="tablaAlumnos"
+                inset="false"
+                items="{datosModel>/Alumnos}"
+            >
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <content>
+                            <Button icon="sap-icon://add" press="onPressAddObj" type="Accept"/>
+                            <Button icon="sap-icon://delete" press="onPressDeleteObj" type="Reject"/>
+                        </content>
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column width="12em">
+                        <Text text="Nombre" />
+                    </Column>
+                    <Column width="12em">
+                        <Text text="Materia" />
+                    </Column>
+                    <Column width="12em" hAlign="Center">
+                        <Text text="Nota" />
+                    </Column>
+                    <Column width="12em">
+                        <Text text="Nota en formato europeo" />
+                    </Column>
+                    <Column width="12em" hAlign="Center">
+                        <Text text="Aprobado" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{datosModel>Nombre}" />
+                            <Text text="{datosModel>Materia}" />
+                            <Text text="{datosModel>Nota}" />
+                            <Text text="{datosModel>NotaEuropea}" />
+                            <ObjectStatus
+							icon="{path: 'datosModel>Nota', formatter: '.formatter.getIconAlumno'}"
+							state="{path: 'datosModel>Nota', formatter: '.formatter.getStateAlumno'}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

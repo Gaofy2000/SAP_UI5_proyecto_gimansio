@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "3.1"
+metadata:
+  name: com.inetum.becapractica
+type: application
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        ignoreCertErrors: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+        ui5:
+          path:
+            - /resources
+            - /test-resources
+          url: https://ui5.sap.com
+        backend:
+          - path: /sap
+            url: http://192.168.10.13:8080
+            client: '001'
+          - url: http://192.168.10.13:8080/
+            client: '001'
+            path: /sap/opu/odata/sap/ZFI_PRACTICA1_SRV/
+          - url: https://services.odata.org
+            path: /v2/northwind/northwind.svc/
+    - name: fiori-tools-appreload
+      afterMiddleware: compression
+      configuration:
+        port: 35729
+        path: webapp
+        delay: 300
+    - name: fiori-tools-preview
+      afterMiddleware: fiori-tools-appreload
+      configuration:
+        flp:
+          theme: sap_horizon
+    - name: sap-fe-mockserver
+      beforeMiddleware: csp
+      configuration:
+        mountPath: /
+        services:
+          - urlPath: /sap/opu/odata/sap/ZFI_GIMNASIO_ODATA_FORM05_SRV
+            metadataPath: ./webapp/localService/mainService/metadata.xml
+            mockdataPath: ./webapp/localService/mainService/data
+            generateMockData: true
+          - urlPath: /sap/opu/odata/sap/ZFI_PRACTICA1_SRV
+            metadataPath: ./webapp/localService/ZFI_PRACTICA1_SRV/metadata.xml
+            mockdataPath: ./webapp/localService/ZFI_PRACTICA1_SRV/data
+            generateMockData: true
+          - urlPath: /v2/northwind/northwind.svc
+            metadataPath: ./webapp/localService/northwind/metadata.xml
+            mockdataPath: ./webapp/localService/northwind/data
+            generateMockData: true
+        annotations: []

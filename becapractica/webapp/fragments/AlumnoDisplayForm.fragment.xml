@@ -1,0 +1,46 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+>
+    <f:SimpleForm
+        id="SimpleFormDisplay354"
+        editable="false"
+        layout="ResponsiveGridLayout"
+        title="{i18n>Alumno}"
+        visible="{= !${datosModel>/EditForm}}"
+        labelSpanXL="3"
+        labelSpanL="3"
+        labelSpanM="3"
+        labelSpanS="12"
+        adjustLabelSpan="false"
+        emptySpanXL="4"
+        emptySpanL="4"
+        emptySpanM="4"
+        emptySpanS="0"
+        columnsXL="1"
+        columnsL="1"
+        columnsM="1"
+        singleContainerFullSize="false"
+    >
+    <f:toolbar>
+        <Toolbar >
+        <Title text="{i18n>Alumno}"></Title>
+        <ToolbarSpacer >
+        </ToolbarSpacer>
+            <Button icon="sap-icon://edit"
+            press="onPressEditForm"></Button>
+        </Toolbar>
+    </f:toolbar>
+        <f:content>
+            <Label text="{i18n>NombreAlumno}" />
+            <Text text="{datosModel>/Alumno/Nombre}" />
+            <Label text="{i18n>DireccionAlumno}" />
+            <Text text="{datosModel>/Alumno/Direccion}" />
+            <Label text="{i18n>ZPAlumno}" />
+            <Text text="{datosModel>/Alumno/ZP}" />
+            <Label text="{i18n>PaisAlumno}" />
+            <Text text="{datosModel>/Alumno/Pais}" />
+        </f:content>
+    </f:SimpleForm>
+</core:FragmentDefinition>
