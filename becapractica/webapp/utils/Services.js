@@ -19,9 +19,9 @@ function () {
             })
          },
          
-         createCall: function (oModel, sEntity, oGym){
+         createCall: function (oModel, sEntity, oObject){
             return new Promise((resolve, reject)=>{
-                oModel.create(sEntity, oGym, {
+                oModel.create(sEntity, oObject, {
                     success: function (oData) {
                         resolve(oData);
                     },
@@ -32,9 +32,9 @@ function () {
             });
          },
 
-         updateCall: function (oModel, sPath, oGym){
+         updateCall: function (oModel, sPath, oObject){
              return new Promise((resolve, reject)=>{
-                 oModel.update(sPath, oGym, {
+                 oModel.update(sPath, oObject, {
                      success: function (oData) {
                         resolve(oData);
                     },
