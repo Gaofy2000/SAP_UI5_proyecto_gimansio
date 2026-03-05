@@ -34,6 +34,15 @@ sap.ui.define([
         onPressOData:function(){
             this.getRouter().navTo(Constants.routes.GIMNASIO);
         },
+        onPressGrafica:function(){
+            this.getRouter().navTo(Constants.routes.GRAFICA);
+        },
+        onPressShellBar:function(){
+            this.getRouter().navTo(Constants.routes.SHELL_BAR);
+        },
+        onPressEjemplo:function(){
+            this.getRouter().navTo(Constants.routes.EJEMPLO);
+        },
         // Creacion de la funcion para obtener la ruta a la que navegar
         getRouter: function() {
             return this.getOwnerComponent().getRouter();

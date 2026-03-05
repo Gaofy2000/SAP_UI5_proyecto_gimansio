@@ -10,14 +10,15 @@
     >
         <content>
             <GenericTile
-                class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout TileTipoObjeto"
                 header="{i18n>TileTipoObjetos}"
                 press="onPressTipoObjeto"
                 frameType="TwoByOne"
                 subheader="{i18n>TipoObjetoSubtitle}"
             >
-                <TileContent>
+                <TileContent class="ContenidoTile">
                     <ImageContent
+                    class="ContenidoTile"
                         src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"
                     />
                 </TileContent>
@@ -87,6 +88,54 @@
                 </TileContent>
                 <TileContent>
                     <ImageContent src="sap-icon://source-code" />
+                </TileContent>
+            </GenericTile>
+            <GenericTile
+                class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                header="{i18n>TileGimnasio}"
+                press="onPressGrafica"
+                frameType="TwoByOne"
+                subheader="{i18n>GimnasioSubtitle}"
+            >
+                <TileContent>
+                    <ImageContent
+                        src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"
+                    />
+                </TileContent>
+                <TileContent>
+                    <ImageContent src="sap-icon://source-code" />
+                </TileContent>
+            </GenericTile>
+            <GenericTile
+                class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                header="{i18n>TileGimnasio}"
+                press="onPressShellBar"
+                frameType="TwoByOne"
+                subheader="{i18n>GimnasioSubtitle}"
+            >
+                <TileContent>
+                    <ImageContent
+                        src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"
+                    />
+                </TileContent>
+                <TileContent>
+                    <ImageContent src="sap-icon://source-code" />
+                </TileContent>
+            </GenericTile>
+            <GenericTile
+                class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+                header="Ejemplo"
+                press="onPressEjemplo"
+                frameType="TwoByOne"
+                subheader="Abrir vista de ejemplo"
+            >
+                <TileContent>
+                    <ImageContent
+                        src="test-resources/sap/m/demokit/sample/GenericTileAsLaunchTile/images/SAPLogoLargeTile_28px_height.png"
+                    />
+                </TileContent>
+                <TileContent>
+                    <ImageContent src="sap-icon://document-text" />
                 </TileContent>
             </GenericTile>
         </content>

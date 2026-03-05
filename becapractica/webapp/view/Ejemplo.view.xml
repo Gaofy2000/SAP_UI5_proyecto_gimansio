@@ -1,0 +1,11 @@
+<mvc:View
+    controllerName="com.inetum.becapractica.controller.Ejemplo"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page title="Ejemplo">
+        <content>
+            <Text text="Ejemplo de vista creada con codex" />
+        </content>
+    </Page>
+</mvc:View>

@@ -19,7 +19,10 @@ sap.ui.define([
             ALUMNOS: "RouteAlumn",
             FORM_ALUMNO: "RouteFormAlumno",
             GIMNASIO: "RouteGimnasio",
-            DETALLE_GIMNASIO: "RouteDetalleGimnasio"
+            DETALLE_GIMNASIO: "RouteDetalleGimnasio",
+            GRAFICA: "RouteGrafica",
+            SHELL_BAR: "RouteShellBar",
+            EJEMPLO: "RouteEjemplo"
         },
         parameters: {
             TIPO_OBJETOS: "TipoObjetos",

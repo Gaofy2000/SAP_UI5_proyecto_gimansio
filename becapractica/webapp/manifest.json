@@ -173,6 +173,34 @@
           "target": [
             "TargetHospital"
           ]
+        },
+        {
+          "name": "RouteGrafica",
+          "pattern": "Grafica",
+          "target": [
+            "TargetGrafica"
+          ]
+        },
+        {
+          "name": "RouteShellBar",
+          "pattern": "ShellBar",
+          "target": [
+            "TargetShellBar"
+          ]
+        },
+        {
+          "name": "RouteDetails",
+          "pattern": "Details",
+          "target": [
+            "TargetDetails"
+          ]
+        },
+        {
+          "name": "RouteEjemplo",
+          "pattern": "Ejemplo",
+          "target": [
+            "TargetEjemplo"
+          ]
         }
       ],
       "targets": {
@@ -203,6 +231,23 @@
         "TargetHospital": {
           "id": "Hospital",
           "name": "Hospital"
+        },
+        "TargetGrafica": {
+          "id": "Grafica",
+          "name": "Grafica"
+        },
+        "TargetShellBar": {
+          "id": "ShellBar",
+          "name": "ShellBar"
+        }
+        ,
+        "TargetDetails": {
+          "id": "Details",
+          "name": "Details"
+        },
+        "TargetEjemplo": {
+          "id": "Ejemplo",
+          "name": "Ejemplo"
         }
       }
     },
