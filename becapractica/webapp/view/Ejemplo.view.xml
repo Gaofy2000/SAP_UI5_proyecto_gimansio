@@ -6,6 +6,7 @@
     <Page title="Ejemplo">
         <content>
             <Text text="Ejemplo de vista creada con codex" />
+            <Text text="Modificado por Claude (claude-sonnet-4-6)" />
         </content>
     </Page>
 </mvc:View>
