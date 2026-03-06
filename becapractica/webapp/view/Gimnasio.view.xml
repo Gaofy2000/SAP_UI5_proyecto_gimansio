@@ -51,6 +51,11 @@
                                 press="onPressCreateGym"
                                 type="Accept"
                             />
+                            <Button
+                                class="sapUiTinyMarginBegin"
+                                icon="sap-icon://nutrition-activity"
+                                type="Transparent"
+                            />
                         </content>
                     </OverflowToolbar>
                 </headerToolbar>
@@ -85,6 +90,11 @@
                                     type="Reject"
                                     icon="sap-icon://delete"
                                     press="onPressDelete"
+                                />
+                                <Button
+                                    class="sapUiTinyMargin"
+                                    type="Accept"
+                                    icon="sap-icon://navigation-right-arrow"
                                 />
                             </HBox>
                         </cells>
