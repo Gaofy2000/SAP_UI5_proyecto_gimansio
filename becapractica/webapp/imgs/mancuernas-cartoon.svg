@@ -1,44 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="280" viewBox="0 0 640 280">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f8fbff"/>
-      <stop offset="100%" stop-color="#e6f3ff"/>
+      <stop offset="0%" stop-color="#f7fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
     </linearGradient>
-    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#b8c2cc"/>
-      <stop offset="100%" stop-color="#7f8b97"/>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d6dbe1"/>
+      <stop offset="50%" stop-color="#9ea8b3"/>
+      <stop offset="100%" stop-color="#7b8794"/>
     </linearGradient>
-    <linearGradient id="pink" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff9ac7"/>
-      <stop offset="100%" stop-color="#f15f9f"/>
-    </linearGradient>
-    <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#7fd3ff"/>
-      <stop offset="100%" stop-color="#3498db"/>
+    <linearGradient id="plate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2c2f33"/>
+      <stop offset="100%" stop-color="#0f1113"/>
     </linearGradient>
   </defs>
+
   <rect width="640" height="280" rx="24" fill="url(#bg)"/>
 
-  <g transform="translate(80,75) rotate(-12 120 60)">
-    <rect x="108" y="48" width="164" height="24" rx="12" fill="url(#metal)" stroke="#5f6b77" stroke-width="4"/>
-    <rect x="84" y="34" width="28" height="52" rx="6" fill="url(#metal)" stroke="#5f6b77" stroke-width="4"/>
-    <rect x="56" y="28" width="28" height="64" rx="8" fill="url(#pink)" stroke="#ad3f72" stroke-width="4"/>
-    <rect x="32" y="22" width="24" height="76" rx="8" fill="url(#pink)" stroke="#ad3f72" stroke-width="4"/>
-    <rect x="272" y="34" width="28" height="52" rx="6" fill="url(#metal)" stroke="#5f6b77" stroke-width="4"/>
-    <rect x="300" y="28" width="28" height="64" rx="8" fill="url(#pink)" stroke="#ad3f72" stroke-width="4"/>
-    <rect x="328" y="22" width="24" height="76" rx="8" fill="url(#pink)" stroke="#ad3f72" stroke-width="4"/>
+  <g transform="translate(92,68) rotate(-10 110 56)">
+    <rect x="84" y="45" width="182" height="22" rx="11" fill="url(#steel)" stroke="#616b76" stroke-width="3"/>
+    <rect x="153" y="39" width="44" height="34" rx="8" fill="#8b97a3" opacity="0.9"/>
+    <rect x="72" y="34" width="12" height="44" rx="4" fill="url(#steel)" stroke="#616b76" stroke-width="2"/>
+    <rect x="266" y="34" width="12" height="44" rx="4" fill="url(#steel)" stroke="#616b76" stroke-width="2"/>
+
+    <rect x="48" y="24" width="24" height="64" rx="6" fill="url(#plate)" stroke="#050607" stroke-width="3"/>
+    <rect x="22" y="18" width="26" height="76" rx="6" fill="url(#plate)" stroke="#050607" stroke-width="3"/>
+    <rect x="-4" y="12" width="26" height="88" rx="6" fill="url(#plate)" stroke="#050607" stroke-width="3"/>
+
+    <rect x="278" y="24" width="24" height="64" rx="6" fill="url(#plate)" stroke="#050607" stroke-width="3"/>
+    <rect x="302" y="18" width="26" height="76" rx="6" fill="url(#plate)" stroke="#050607" stroke-width="3"/>
+    <rect x="328" y="12" width="26" height="88" rx="6" fill="url(#plate)" stroke="#050607" stroke-width="3"/>
   </g>
 
-  <g transform="translate(220,110) rotate(10 120 60)">
-    <rect x="108" y="48" width="164" height="24" rx="12" fill="url(#metal)" stroke="#5f6b77" stroke-width="4"/>
-    <rect x="84" y="34" width="28" height="52" rx="6" fill="url(#metal)" stroke="#5f6b77" stroke-width="4"/>
-    <rect x="56" y="28" width="28" height="64" rx="8" fill="url(#blue)" stroke="#21618c" stroke-width="4"/>
-    <rect x="32" y="22" width="24" height="76" rx="8" fill="url(#blue)" stroke="#21618c" stroke-width="4"/>
-    <rect x="272" y="34" width="28" height="52" rx="6" fill="url(#metal)" stroke="#5f6b77" stroke-width="4"/>
-    <rect x="300" y="28" width="28" height="64" rx="8" fill="url(#blue)" stroke="#21618c" stroke-width="4"/>
-    <rect x="328" y="22" width="24" height="76" rx="8" fill="url(#blue)" stroke="#21618c" stroke-width="4"/>
+  <g transform="translate(232,112) rotate(9 110 56)">
+    <rect x="84" y="45" width="182" height="22" rx="11" fill="url(#steel)" stroke="#616b76" stroke-width="3"/>
+    <rect x="153" y="39" width="44" height="34" rx="8" fill="#8b97a3" opacity="0.9"/>
+    <rect x="72" y="34" width="12" height="44" rx="4" fill="url(#steel)" stroke="#616b76" stroke-width="2"/>
+    <rect x="266" y="34" width="12" height="44" rx="4" fill="url(#steel)" stroke="#616b76" stroke-width="2"/>
+
+    <rect x="48" y="24" width="24" height="64" rx="6" fill="url(#plate)" stroke="#050607" stroke-width="3"/>
+    <rect x="22" y="18" width="26" height="76" rx="6" fill="url(#plate)" stroke="#050607" stroke-width="3"/>
+    <rect x="-4" y="12" width="26" height="88" rx="6" fill="url(#plate)" stroke="#050607" stroke-width="3"/>
+
+    <rect x="278" y="24" width="24" height="64" rx="6" fill="url(#plate)" stroke="#050607" stroke-width="3"/>
+    <rect x="302" y="18" width="26" height="76" rx="6" fill="url(#plate)" stroke="#050607" stroke-width="3"/>
+    <rect x="328" y="12" width="26" height="88" rx="6" fill="url(#plate)" stroke="#050607" stroke-width="3"/>
   </g>
 
-  <ellipse cx="160" cy="235" rx="90" ry="16" fill="#c5d9ea" opacity="0.5"/>
-  <ellipse cx="440" cy="245" rx="110" ry="18" fill="#c5d9ea" opacity="0.45"/>
+  <ellipse cx="182" cy="234" rx="112" ry="16" fill="#9fb3c8" opacity="0.38"/>
+  <ellipse cx="462" cy="246" rx="124" ry="18" fill="#9fb3c8" opacity="0.34"/>
 </svg>
