@@ -91,6 +91,17 @@
                     </ColumnListItem>
                 </items>
             </Table>
+            <VBox
+                class="sapUiMediumMarginTop sapUiMediumMarginBottom"
+                alignItems="Center"
+            >
+                <Image
+                    src="imgs/mancuernas-cartoon.svg"
+                    alt="Mancuernas estilo cartoon"
+                    width="22rem"
+                    densityAware="false"
+                />
+            </VBox>
             <!-- <Table
                 id="tablaJson"
                 inset="false"
