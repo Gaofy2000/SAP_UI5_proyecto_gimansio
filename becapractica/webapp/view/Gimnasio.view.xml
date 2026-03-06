@@ -96,6 +96,7 @@
                 alignItems="Center"
             >
                 <Image
+                    id="imgMancuernas"
                     src="imgs/mancuernas-cartoon.svg"
                     alt="Mancuernas estilo cartoon"
                     width="22rem"

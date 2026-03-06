@@ -19,6 +19,9 @@ sap.ui.define([
             this.getOwnerComponent().getRouter()
                 .getRoute(Constants.routes.GIMNASIO).attachPatternMatched(this.onMatchedRoute, this);
 
+            const sImgPath = sap.ui.require.toUrl("com/inetum/becapractica/imgs/mancuernas-cartoon.svg");
+            this.byId("imgMancuernas").setSrc(sImgPath);
+
             // Segunda manera para recuperar datos del oData
             // this.fnGetGimnasio();
             this.fnMultiPromise();
