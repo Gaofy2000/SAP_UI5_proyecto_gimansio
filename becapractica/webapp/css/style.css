@@ -1,1 +1,108 @@
-/* Enter your custom styles here */
+/* Ocultar leyenda original */
+/* .sapSuiteIDCLegend {
+    display: none;
+    width: 1px !important;
+} */
+
+#__data10{
+    width: 100px;
+}
+
+#__hbox1{
+    width: 300px !important;
+}
+
+.sapSuiteIDCChart{
+    width: 70% !important;
+    height: 80% !important;
+    /* margin-right: 50px !important; */
+}
+
+
+#application-app-preview-component---Grafica--idDonutChart{
+    display: flex !important;
+    /* flex-direction: row-reverse !important; */
+    width: 300px !important;
+    height: 200px !important;
+}
+
+.sapSuiteIDC svg g path:nth-child(4) {
+    fill: #28a745 !important;
+}
+
+/* .sapSuiteIDC svg g path:nth-child(5) {
+    fill: #007bff !important;
+} */
+
+.sapSuiteIDC svg g path:nth-child(6) {
+    fill: #fd7e14 !important;
+}
+
+.colorIndicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.colorTeletreball {
+    background-color: #28a745;
+}
+
+.colorPresencials {
+    background-color: #007bff;
+}
+
+.colorPendents {
+    background-color: #fd7e14;
+}
+
+.sapMGT{
+    background-color: #28a745;
+}
+
+.sapMGT div span:first-of-type{
+    color:gold;
+}
+
+.TileTipoObjeto{
+    background-color: #45035a;
+
+}
+
+.TileTipoObjeto:hover{
+    background-color: #007bff !important;
+
+}
+
+/* El first-of-type implica a todos los span que esten primeros en un div */
+.TileTipoObjeto div span:first-of-type{
+    color:aqua;
+}
+
+.sapMPageHeader div{
+    background-color: aquamarine;
+}
+
+/* Para poder alinear los elementos hace falta eliminar el flex que pone SAP por defecto
+para ello usamos el display:block */
+.sapMBarPH{
+    display: block;
+    align-self: center !important;
+}
+
+.sapUshellShellIco img{
+    content: url("../imgs/Designer.png") !important;
+}
+
+.sapMPageEnableScrolling{
+    background-image: url("../imgs/Designer.png");
+    background-position: center top;
+    background-color: blanchedalmond;
+}
+
+.sapUshellShellHeader{
+    background-color: antiquewhite;
+}

@@ -268,7 +268,7 @@ sap.ui.define([
             let aPromise = [
                 Services.readCall(oModel, "/Categories"),
                 Services.readCall(oModel, "/Customers"),
-                Services.readCall(oModel, "/PRoducts")
+                Services.readCall(oModel, "/Products")
             ];
 
             Promise.all(aPromise).then((aData) => {

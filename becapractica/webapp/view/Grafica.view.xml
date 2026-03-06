@@ -1,0 +1,115 @@
+<mvc:View
+    controllerName="com.inetum.becapractica.controller.Grafica"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:mc="sap.suite.ui.microchart"
+    xmlns:card="sap.f.cards"
+    xmlns:core="sap.ui.core"
+>
+    <Page title="{i18n>tituloApp}">
+        <content>
+            <f:Card
+                id="card9"
+                class="sapUiSmallMargin"
+                width="{= ${device>/system/phone} ? 'auto' : '42rem' }"
+                tooltip="{i18n>permisosCardSub}"
+                visible="{mostrar>/permisos/aut}"
+            >
+                <f:header>
+                    <card:Header
+                        id="idHeaderProporcionalidad"
+                        title="{i18n>proporcionalidadCard}"
+                        subtitle="{i18n>proporcionalidadSub}"
+                        iconSrc="sap-icon://donut-chart"
+                        press=".onHeaderPress"
+                    />
+                </f:header>
+                <f:content>
+                    <VBox>
+                        <HBox class="sapUiTinyMargin">
+                            <Title
+                                text="Proporcionalitat aplicable:"
+                                class="sapUiSmallMarginEnd"
+                            />
+                            <Label
+                                wrapping="true"
+                                text="Màxim 40-50% dies presencials"
+                                design="Bold"
+                            />
+                        </HBox>
+                        <!-- <HBox> -->
+                        <!-- <VBox> -->
+                        <VBox>
+                            <Title
+                                text="Situació actual – Any 2026"
+                                textAlign="Center"
+                                titleStyle="H3"
+                                width="100%"
+                            />
+                            <HBox>
+                                <HBox width="21rem">
+                                    <mc:InteractiveDonutChart
+                                        id="idDonutChart"
+                                        selectionEnabled="false"
+                                    >
+                                        <mc:segments>
+                                            <mc:InteractiveDonutChartSegment
+                                                class="segmento1"
+                                                label="Teletreball"
+                                                value="40.0"
+                                                displayedValue="40,0%"
+                                            />
+                                            <mc:InteractiveDonutChartSegment
+                                                class="segmento2"
+                                                label="Presencials"
+                                                value="21.5"
+                                                displayedValue="21,5%"
+                                            />
+                                            <mc:InteractiveDonutChartSegment
+                                                class="segmento3"
+                                                label="Pendents"
+                                                value="38.5"
+                                                displayedValue="38,5%"
+                                            />
+                                        </mc:segments>
+                                    </mc:InteractiveDonutChart>
+                                </HBox>
+                            </HBox>
+                        </VBox>
+                        <VBox>
+                            <Button
+                                text="Mostrar detalles"
+                                press="onPressShowDetails"
+                                ariaHasPopup="Dialog"
+                            />
+                        </VBox>
+                        <!-- </VBox> -->
+                        <!-- </HBox> -->
+                        <!-- <List > -->
+                        <!-- <CustomListItem> -->
+                        <!-- <InputListItem > -->
+                        <HBox
+                            justifyContent="End"
+                            alignItems="Center"
+                        >
+                            <Label
+                                text="Informació addicional"
+                                class="sapUiSmallMarginEnd"
+                            />
+                            <Button
+                                icon="sap-icon://arrow-right"
+                                type="Emphasized"
+                                tooltip="{i18n>reqHorarios}"
+                                class="sapUiTinyMarginEnd"
+                                press=".onVerControlHorari($event, '0')"
+                            />
+                        </HBox>
+                        <!-- </InputListItem>
+                                    </List> -->
+                    </VBox>
+                </f:content>
+            </f:Card>
+        </content>
+    </Page>
+</mvc:View>

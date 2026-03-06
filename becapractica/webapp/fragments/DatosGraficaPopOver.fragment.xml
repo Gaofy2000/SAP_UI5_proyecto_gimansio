@@ -1,0 +1,129 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <ResponsivePopover
+        id="myPopover"
+        title="{i18n>Name}"
+        class="sapUiContentPadding"
+        placement="Right"
+        showCloseButton="true"
+        contentWidth="650px"
+    >
+        <customHeader>
+            <Bar>
+                <contentLeft>
+                    <Title
+                        text="Situació actual – Any 2026"
+                        wrapping="true"
+                        textAlign="Center"
+                    />
+                </contentLeft>
+                <contentRight>
+                    <Button
+                        icon="sap-icon://decline"
+                        type="Transparent"
+                        press="onPressClosePopover"
+                    />
+                </contentRight>
+            </Bar>
+        </customHeader>
+        <content>
+            <Table
+                fixedLayout="false"
+                width="100%"
+            >
+                <columns>
+                    <Column
+                        width="60%"
+                        minScreenWidth="Tablet"
+                        demandPopin="false"
+                    >
+                        <Text text="Permisos validats" />
+                    </Column>
+                    <Column
+                        width="20%"
+                        hAlign="Center"
+                        minScreenWidth="Tablet"
+                        demandPopin="false"
+                    >
+                        <Text text="Total" />
+                    </Column>
+                    <Column
+                        width="20%"
+                        hAlign="Center"
+                        minScreenWidth="Tablet"
+                        demandPopin="false"
+                    >
+                        <Text text="% anual (2026)" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <HBox alignItems="Center">
+                                <core:HTML
+                                    content="&lt;span class='colorIndicator colorTeletreball'&gt;&lt;/span&gt;"
+                                />
+                                <Label
+                                    text="Dies de teletreball"
+                                    class="sapUiTinyMarginBegin"
+                                />
+                            </HBox>
+                            <Text
+                                text="20"
+                                textAlign="Center"
+                            />
+                            <Text
+                                text="40,0%"
+                                textAlign="Center"
+                            />
+                        </cells>
+                    </ColumnListItem>
+                    <ColumnListItem>
+                        <cells>
+                            <HBox alignItems="Center">
+                                <core:HTML
+                                    content="&lt;span class='colorIndicator colorPresencials'&gt;&lt;/span&gt;"
+                                />
+                                <Label
+                                    text="Dies presencials"
+                                    class="sapUiTinyMarginBegin"
+                                />
+                            </HBox>
+                            <Text
+                                text="12"
+                                textAlign="Center"
+                            />
+                            <Text
+                                text="21,5%"
+                                textAlign="Center"
+                            />
+                        </cells>
+                    </ColumnListItem>
+                    <ColumnListItem>
+                        <cells>
+                            <HBox alignItems="Center">
+                                <core:HTML
+                                    content="&lt;span class='colorIndicator colorPendents'&gt;&lt;/span&gt;"
+                                />
+                                <Label
+                                    text="Pendents"
+                                    class="sapUiTinyMarginBegin"
+                                />
+                            </HBox>
+                            <Text
+                                text="19"
+                                textAlign="Center"
+                            />
+                            <Text
+                                text="38,5%"
+                                textAlign="Center"
+                            />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </ResponsivePopover>
+</core:FragmentDefinition>
